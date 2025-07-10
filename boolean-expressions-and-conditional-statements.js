@@ -7,8 +7,8 @@ to drive logic and outcomes in you program.
 Instructions:
 If you are not familiar with the concept of a text-based adventure game,
 let's set the scene...
-Example: "You wake up in a dark forest. There are two paths ahead of you:
-one leading to the mountains and one to a village.
+Example: "You wake up in the Matrix Vortex. There are two options you can take:
+the first one taking the blue pill and one to take the red pill.
 Your choices will determine your fate!"
 
 Define the Requirements: You must:
@@ -26,20 +26,20 @@ Paste the following code into your editor:
 
 const readline = require('readline-sync');
 
-const hasTorch = true;
-const hasMap = false;
+const easyRoute = true;
+const hardRoute = false;
 
-console.log("You see two paths: one leads to the mountains, the other to the village.");
-const choice = readline.question("Do you go to the 'mountains' or the 'village'?");
+console.log("You have two options: take the blue pill or take the red pill");
+const choice = readline.question("Do you take the blue pill or the red pill'?");
 
-if (choice === "mountains" && hasTorch) {
-  console.log("You safely navigate through the dark mountains.");
-} else if (choice === "mountains" && !hasTorch) {
-  console.log("It's too dark to proceed. You decide to turn back.");
-} else if (choice === "village" || hasMap) {
-  console.log("You find your way to the village.");
+if (choice === "blue pill" && easyRoute) {
+  console.log("The game is over and you get to go.");
+} else if (choice === "blue pill" && !easyRoute) {
+  console.log("You want to stay comfortable");
+} else if (choice === "red pill" || hardRoute) {
+  console.log("The game will continue and you'll face difficulty.");
 } else {
-  console.log("You get lost and wander aimlessly.");
+  console.log("You love uncomfortability and harsh challenges.");
 }
 
 /* 
